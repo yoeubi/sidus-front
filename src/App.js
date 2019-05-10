@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import { Switch, Route } from "react-router-dom";
+import Main from "./components/Main";
+import Join from "./components/Join";
+import JoinForm from "./components/JoinForm";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="app">
+            <Switch>
+                <Route exact path="/" component={Main} />
+                <Route path="/join" component={Join} />
+                <Route path="/join-next" component={JoinForm} />
+            </Switch>
+        </div>
+    );
+};
 
 export default App;
