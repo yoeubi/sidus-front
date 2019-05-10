@@ -1,0 +1,42 @@
+.item {
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 7px #ddd;
+  svg {
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+  }
+
+  img {
+    width: 100%;
+  }
+  .content {
+    padding: 13px 10px;
+    .title {
+      font-weight: 400;
+      font-size: 15px;
+      min-height: 44px;
+    }
+    .working-period {
+      margin-top: 15px;
+      color: #888;
+      font-weight: 300;
+      font-size: 12px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #ddd;
+    }
+    .left-period {
+      padding-top: 5px;
+      color: #ccc;
+      text-align: right;
+    }
+  }
+}

@@ -35,13 +35,15 @@ class JoinForm extends Component {
         if (!this.id) {
           this.id = setInterval(() => {
             const { count } = this.state;
-            console.log(count);
             if (count <= 0) return;
             this.setState(state => ({ count: state.count - 1 }));
           }, 1000);
         }
       }
     }
+  }
+  componentWillUnmount() {
+    sessionStorage.setItem('user', JSON.stringify(this.state));
   }
 
   onClick = () => {
@@ -280,7 +282,7 @@ class JoinForm extends Component {
                           this.onSelect({ target: 'job', value: '개발자' })
                         }
                       >
-                        개발자
+                        개발
                       </p>
                     </div>
                   </div>
